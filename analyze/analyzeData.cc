@@ -21,6 +21,8 @@ std::string toString(const T &value) {
 int main() {
 	ofstream fout;
 	fout.open("stats_ps5.txt");
+	fout << "J. Huang Stats PS5" << endl;
+	fout << "Output: signal and background error rate (BDT)" << endl;
 	
 	string signame ("hSig");
 	string bkgname ("hBkg");
@@ -76,7 +78,7 @@ int main() {
 	  const double tCutFisher = 0.0;
 	  const double tCutMLP = 0.5;
 	  for (int i=0; i<treeVec.size(); i++){
-	
+	 
 	    treeVec[i]->Print();
 	    Event evt;
 	    treeVec[i]->SetBranchAddress("evt", &evt);
